@@ -1,0 +1,30 @@
+{
+    "nav":{
+        "imagen": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/08/Netflix_2015_logo.svg/799px-Netflix_2015_logo.svg.png?20190206123158",
+        "enlace": "Sign In"
+    },
+
+
+    "header":{
+        "div":{
+            "titulo":"STEP 1 OF 3",
+            "texto" :"Choose the plan that’s right for you",
+            "parrafo" : [
+                {
+                    "icon":"",
+                    "texto": "Watch all you want. Ad-free."
+                },
+                {
+                    "icon":"",
+                    "texto": "Recommendations just for you."
+                },
+                {
+                    "icon":"",
+                    "texto": "Change or cancel your plan anytime."
+                }
+            ]
+
+        }
+    }
+}
+
