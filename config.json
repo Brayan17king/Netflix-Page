@@ -19,6 +19,24 @@
             }
         ]
 
+    },
+
+    "section":{
+        "card": [
+            {
+                "title": "Basic",
+                "twotitle": "$6.99"
+            },
+            {
+                "title1": "Standart",
+                "twotitle1": "$15.49"
+            },
+            {
+                "title2": "Premium",
+                "twotitle2": "$19.99"
+            }
+        ]
+        
     }
 }
 

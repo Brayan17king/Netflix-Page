@@ -78,3 +78,46 @@ let construiSection1 = async(path)=>{
 }
 
 construiSection1("config");
+
+let construiSection2 = async(path)=>{
+    let peticion = await fetch(`${path}.json`);
+    let res = await peticion.json();
+    let seleccion = document.querySelector('#cards');
+    seleccion.insertAdjacentHTML('beforeend', /*html*/`
+    <div class="col">
+    <div class="card mb-4 rounded-3">
+      <div class="card-header py-3">
+        <h4 class="my-0 fw-normal">${res.section.card[0].title}</h4>
+      </div>
+      <div class="card-body">
+        <h1 class="card-title pricing-card-title">${res.section.card[0].twotitle}<small class="text-body-secondary fw-light">/mo</small>
+        </h1>
+      </div>
+    </div>
+  </div>
+  <div class="col">
+    <div class="card mb-4 rounded-3">
+      <div class="card-header py-3">
+        <h4 class="my-0 fw-normal">${res.section.card[1].title1}</h4>
+      </div>
+      <div class="card-body">
+        <h1 class="card-title pricing-card-title">${res.section.card[1].twotitle1}<small class="text-body-secondary fw-light">/mo</small>
+        </h1>
+      </div>
+    </div>
+  </div>
+  <div class="col">
+    <div class="card mb-4 border-danger">
+      <div class="card-header py-3 text-bg-danger">
+        <h4 class="my-0 fw-normal">${res.section.card[2].title2}</h4>
+      </div>
+      <div class="card-body">
+        <h1 class="card-title pricing-card-title">${res.section.card[2].twotitle2}<small class="text-body-secondary fw-light">/mo</small>
+        </h1>
+      </div>
+    </div>
+  </div>
+    `)
+}
+
+construiSection2("config");
