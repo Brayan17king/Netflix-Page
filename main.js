@@ -121,3 +121,14 @@ let construiSection2 = async(path)=>{
 }
 
 construiSection2("config");
+
+let construiSection3 = async(path)=>{
+    let peticion = await fetch(`${path}.json`);
+    let res = await peticion.json();
+    let seleccion = document.querySelector('#seccion1');
+    seleccion.insertAdjacentHTML('beforeend', /*html*/`
+    
+    `)
+}
+
+construiSection3("config");
