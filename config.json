@@ -4,27 +4,21 @@
         "enlace": "Sign In"
     },
 
-
     "header":{
-        "div":{
-            "titulo":"STEP 1 OF 3",
-            "texto" :"Choose the plan that’s right for you",
-            "parrafo" : [
-                {
-                    "icon":"",
-                    "texto": "Watch all you want. Ad-free."
-                },
-                {
-                    "icon":"",
-                    "texto": "Recommendations just for you."
-                },
-                {
-                    "icon":"",
-                    "texto": "Change or cancel your plan anytime."
-                }
-            ]
+        "title": "STEP 1 OF 3",
+        "sub-title": "Choose the plan that’s right for you",
+        "parrafo":[
+            {
+                "texto": "Watch all you want. Ad-free."
+            },
+            {
+                "texto": "Recommendations just for you."
+            },
+            {
+                "texto": "Change or cancel your plan anytime."
+            }
+        ]
 
-        }
     }
 }
 
