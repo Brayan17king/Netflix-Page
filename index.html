@@ -7,15 +7,13 @@
   <meta name="description" content="">
   <meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors">
   <meta name="generator" content="Hugo 0.115.4">
-  <title>Netflix</title>
-  <link rel="shortcut icon" href="https://assets.nflxext.com/us/ffe/siteui/common/icons/nficon2016.ico" type="image/x-icon">
-  <script src="../assets/js/color-modes.js"></script>
+  <title>Pricing example · Bootstrap v5.3</title>
+  <script src="assets/js/color-modes.js"></script>
   <link rel="canonical" href="https://getbootstrap.com/docs/5.3/examples/pricing/">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@docsearch/css@3">
-  <link href="../assets/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="assets/dist/css/bootstrap.min.css" rel="stylesheet">
   <link href="pricing.css" rel="stylesheet">
-  <link rel="stylesheet" href="https://unpkg.com/boxicons@latest/css/boxicons.min.css">
-  <script src="../assets/dist/js/bootstrap.bundle.min.js" defer></script>
+  <script src="assets/dist/js/bootstrap.bundle.min.js" defer></script>
 </head>
 
 <body>
@@ -95,126 +93,143 @@
         d="M13.854 3.646a.5.5 0 0 1 0 .708l-7 7a.5.5 0 0 1-.708 0l-3.5-3.5a.5.5 0 1 1 .708-.708L6.5 10.293l6.646-6.647a.5.5 0 0 1 .708 0z" />
     </symbol>
   </svg>
-
-  <div class="container">
+  <nav class="navbar border-bottom ">
+    <div class="container-fluid py-3">
+      <a class="px-5" href="/" class="d-flex align-items-center link-body-emphasis text-decoration-none">
+        <img class="netflixlogo"
+          src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/08/Netflix_2015_logo.svg/799px-Netflix_2015_logo.svg.png?20190206123158"
+          alt="logo">
+      </a>
+      <a class="px-5 link-body-emphasis text-decoration-none" href="#">Sign In</a>
+    </div>
+  </nav>
+  <div class="container py-3">
     <header>
-      <div class="header d-flex align-items-center border-bottom justify-content-between">
-        <a href="/" class="d-flex align-items-center link-body-emphasis text-decoration-none">
-          <img class="header-img" src="../img/logo.png" alt="Logo Netflix">
-        </a>
-
-        <nav class="d-inline-flex">
-          <a class="iniciar text-decoration-underline-emphasis text-decoration-none" href="#">Iniciar sesión</a>
-        </nav>
-      </div>
-
-      <div class="pricing-header p-3 pb-md-4 mx-auto">
-        <p class="header-text1">PASO <strong>1</strong> DE <strong>3</strong></p>
-        <h1 class="header-text2 text-body-emphasis">Selecciona el plan ideal para ti</h1>
-        <div>
-          <svg id="chulo" class="bi" width="30" height="30" style="color: #e50b16;">
+      <div class="pricing-header py-3 pb-md text-start">
+        <h1 class="fs-6 fw-normal text-body-emphasis">STEP 1 OF 3</h1>
+        <p class="fs-2 fw-bold">Choose the plan that’s right for you
+        </p>
+        <p class="d-flex align-items-center fw-semibold"><svg class="bi text-danger" width="24" height="24">
             <use xlink:href="#check" />
-          </svg></td><span class="header-text3"> Ve todo lo que quieras. Sin anuncios.</span><br>
-          <svg id="chulo" class="bi" width="30" height="30" style="color: #e50b16;">
+          </svg>&ensp;Watch all you want. Ad-free.</p>
+        <p class="d-flex align-items-center fw-semibold"><svg class="bi text-danger fw-bold" width="24" height="24">
             <use xlink:href="#check" />
-          </svg></td><span class="header-text3"> Recomendaciones exclusivas para ti.</span><br>
-          <svg id="chulo" class="bi" width="30" height="30" style="color: #e50b16;">
+          </svg>&ensp;Recommendations just for you.</p>
+        <p class="d-flex align-items-center fw-semibold"><svg class="bi text-danger fw-bold" width="24" height="24">
             <use xlink:href="#check" />
-          </svg></td><span class="header-text3"> Puedes cambiar de plan o cancelar cuando quieras.</span>
-        </div>
+          </svg>&ensp;Change or cancel your plan anytime.</p>
       </div>
     </header>
+    <main>
+      <div class="row row-cols-1 row-cols-md-3 mb-3 text-center">
+        <div class="col">
+          <div class="card mb-4 rounded-3">
+            <div class="card-header py-3">
+              <h4 class="my-0 fw-normal">Basic</h4>
+            </div>
+            <div class="card-body">
+              <h1 class="card-title pricing-card-title">$6.99<small class="text-body-secondary fw-light">/mo</small>
+              </h1>
+            </div>
+          </div>
+        </div>
+        <div class="col">
+          <div class="card mb-4 rounded-3">
+            <div class="card-header py-3">
+              <h4 class="my-0 fw-normal">Standart</h4>
+            </div>
+            <div class="card-body">
+              <h1 class="card-title pricing-card-title">$15.49<small class="text-body-secondary fw-light">/mo</small>
+              </h1>
+            </div>
+          </div>
+        </div>
+        <div class="col">
+          <div class="card mb-4 border-danger">
+            <div class="card-header py-3 text-bg-danger">
+              <h4 class="my-0 fw-normal">Premium</h4>
+            </div>
+            <div class="card-body">
+              <h1 class="card-title pricing-card-title">$19.99<small class="text-body-secondary fw-light">/mo</small>
+              </h1>
+            </div>
+          </div>
+        </div>
+      </div>
 
-    <main class="align-items-center">  
+      <h2 class="display-6 text-center mb-4">Compare plans</h2>
 
       <div class="table-responsive">
         <table class="table text-center">
           <thead>
             <tr>
-              <th></th>
-              <th ><p style="background-color: #ef6b71; color: #fff; padding: 40px 0px;">Básico</p></th>
-              <th ><p style="background-color: #ef6b71; color: #fff; padding: 40px 0px;">Estándar</p></th>
-              <th ><p style="background-color: #ef6b71; color: #fff; padding: 40px 0px;">Premium</p></th>
+              <th style="width: 34%;"></th>
+              <th style="width: 22%;">Basic</th>
+              <th style="width: 22%;">Standart</th>
+              <th class="text-danger" style="width: 22%;">Premium</th>
             </tr>
           </thead>
           <tbody>
             <tr>
-              <th scope="row" width="0px" class="text-start">Precio mensual</th>
-              <td>$ 16.900</td>
-              <td>$ 26.900</td>
-              <td>$ 38.900</td>
+              <th scope="row" class="text-start">Monthly price</th>
+              <td>$6.99</td>
+              <td>$15.49</td>
+              <td class="text-danger">$19.99</td>
             </tr>
             <tr>
-              <th scope="row" class="text-start">Calidad de vídeo</th>
-              <td>Buena</td>
-              <td>Mejor</td>
-              <td>Óptima</td>
+              <th scope="row" class="text-start">Video quality</th>
+              <td>Good</td>
+              <td>Better</td>
+              <td class="text-danger">Best</td>
             </tr>
           </tbody>
 
           <tbody>
             <tr>
-              <th scope="row" class="text-start">Resolución</th>
+              <th scope="row" class="text-start">Resolution</th>
               <td>720p</td>
               <td>1080p</td>
-              <td>4K+HDR</td>
+              <td class="text-danger">4K+HDR</td>
             </tr>
             <tr>
-              <th scope="row" class="text-start">Ve Netflix en tu TV, computadora, celular y tablet</th>
-              <td><svg class="bi" width="24" height="24">
-                <use xlink:href="#check" />
-              </svg></td>
-              <td><svg class="bi" width="24" height="24">
+              <th scope="row" class="text-start">Watch on your TV, computer, mobile phone and tablet</th>
+              <td><svg class="bi text-center" width="24" height="24">
                   <use xlink:href="#check" />
                 </svg></td>
               <td><svg class="bi" width="24" height="24">
+                  <use xlink:href="#check" />
+                </svg></td>
+              <td><svg class="bi text-danger" width="24" height="24">
                   <use xlink:href="#check" />
                 </svg></td>
             </tr>
           </tbody>
         </table>
-      </div>
-      <div class="bottom">
-        <p class="bottom-text">La disponibilidad del contenido en HD (720p), Full HD (1080p), Ultra HD (4K) y HDR depende de la capacidad de tu servicio de internet y del dispositivo. No todo el contenido está disponible en todas las resoluciones. Consulta nuestros <a class="bottom-link text-decoration-none" href="#">Términos de uso</a> para obtener más información.</p>
-        <p class="bottom-text">Solo las personas que viven contigo pueden usar tu cuenta. Puedes ver Netflix en 4 dispositivos distintos al mismo tiempo con el plan Premium, en 2 con el plan Estándar y en 1 con el plan Básico.</p>
-        <div class="d-flex justify-content-center"><a class="text-decoration-none" href="#">Siguiente</a></div>
+        <p class="fs-6">HD (720p), Full HD (1080p), Ultra HD (4K) and HDR availability subject to your internet service and device capabilities. Not all content is available in all resolutions. See our <a href="https://help.netflix.com/legal/termsofuse">Terms of Use</a> for more details.
+          Only people who live with you may use your account. Watch on 4 different devices at the same time with Premium, 2 with Standard and 1 with Basic.</p>
+          <div class="d-grid gap-2 col-6 mx-auto">
+            <button class="btn btn-danger py-3 fs-4" type="button">Next</button>
+          </div>
       </div>
     </main>
-
-    <footer class="pt-4 my-md-5 pt-md-5 border-top">
-      <div class="row">
-        <div class="col-12">
-          <small class="d-block mb-3 text-body-secondary">¿Preguntas? Llama al 01 800 917 1564</small>
-        </div>
-        <div class="col-6 col-md">
-          <ul class="list-unstyled text-small">
-            <li class="mb-1"><a class="link-secondary text-decoration-none" href="#">Preguntas frecuentes</a></li>
-            <li class="mb-1"><a class="link-secondary text-decoration-none" href="#">Privacidad</a></li>
-            <li><select data-uia="language-picker" class="nfSelect" id="lang-switcher-select" name="__langSelect" tabindex="0"><option selected="" label="Español" lang="es" value="/signup/planform?locale=es-CO">Español</option><option label="English" lang="en" value="/signup/planform?locale=en-CO">English</option></select></li>
-          </ul>
-        </div>
-        <div class="col-6 col-md">
-          <ul class="list-unstyled text-small">
-            <li class="mb-1"><a class="link-secondary text-decoration-none" href="#">Centro de ayuda</a></li>
-            <li class="mb-1"><a class="link-secondary text-decoration-none" href="#">Preferencias de cookies</a></li>
-          </ul>
-        </div>
-        <div class="col-6 col-md">
-          <ul class="list-unstyled text-small">
-            <li class="mb-1"><a class="link-secondary text-decoration-none" href="#">Tienda Netflix</a></li>
-            <li class="mb-1"><a class="link-secondary text-decoration-none" href="#">Información corporativa</a></li>
-          </ul>
-        </div>
-        <div class="col-6 col-md">
-          <ul class="list-unstyled text-small">
-            <li class="mb-1"><a class="link-secondary text-decoration-none" href="#">Términos de uso</a></li>
-          </ul>
-        </div>
-      </div>
-    </footer>
   </div>
-  
-
+  <footer class="pt-4 my-md-5 pt-md-5 px-5 border-top">
+    <p>Questions? Call 01 800 917 1563</p>
+    <div class="d-flex flex-wrap ps-0 gap-3">
+      <ul class="ps-0">
+        <p><a class="text-decoration-none text-dark" href="#">FAQ<ap></ap></p>
+        <p><a class="text-decoration-none text-dark" href="#">Privacy<ap></ap></p>
+      </ul>
+      <ul>
+        <p><a class="text-decoration-none text-dark" href="#">Help Center</a></p>
+        <p><a class="text-decoration-none text-dark" href="#">Cookie Preferences</a></p>
+      </ul>
+      <ul>
+        <p><a class="text-decoration-none text-dark" href="#">Netflix Shop</a></p>
+        <p><a class="text-decoration-none text-dark" href="#">Corporate Information</a></p>
+      </ul>
+      <p><a class="text-decoration-none text-dark" href="#">Terms of Use</a></p>
+    </div>
+  </footer>
 </body>
-
 </html>
