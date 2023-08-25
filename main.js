@@ -149,39 +149,38 @@ let construirSection3 = async (path) => {
       <thead>
         <tr>
           <th style="width: 34%;"></th>
-          <th style="width: 22%;">${res.prices.tables.t1}</th>
-          <th style="width: 22%;">${res.prices.tables.t2}</th>
-          <th class="text-danger" style="width: 22%;">${res.prices.tables.t3
-    }</th>
+          <th style="width: 22%;">${res.prices.tables[0].t1}</th>
+          <th style="width: 22%;">${res.prices.tables[1].t2}</th>
+          <th class="text-danger" style="width: 22%;">${res.prices.tables[2].t3}</th>
         </tr>
       </thead>
       <tbody>
         <tr>
           <th scope="row" class="text-start">Monthly price</th>
-          <td>${res.prices.price.p1}</td>
-          <td>${res.prices.price.p2}</td>
-          <td class="text-danger">${res.prices.price.p3}</td>
+          <td>${res.prices.price[0].p1}</td>
+          <td>${res.prices.price[1].p2}</td>
+          <td class="text-danger">${res.prices.price[2].p3}</td>
         </tr>
         <tr>
           <th scope="row" class="text-start">Video quality</th>
-          <td>${res.prices.video.v1}</td>
-          <td>${res.prices.video.v2}</td>
-          <td class="text-danger">${res.prices.video.v3}</td>
+          <td>${res.prices.video[0].v1}</td>
+          <td>${res.prices.video[1].v2}</td>
+          <td class="text-danger">${res.prices.video[2].v3}</td>
         </tr>
       </tbody>
 
       <tbody>
         <tr>
           <th scope="row" class="text-start">Resolution</th>
-          <td>${res.prices.resolution.r1}</td>
-          <td>${res.prices.resolution.r2}</td>
-          <td class="text-danger">${res.prices.resolution.r3}</td>
+          <td>${res.prices.resolution[0].r1}</td>
+          <td>${res.prices.resolution[1].r2}</td>
+          <td class="text-danger">${res.prices.resolution[2].r3}</td>
         </tr>
         <tr>
                 <th scope="row" class="text-start">Watch on your TV, computer, mobile phone and tablet</th>
-                <td>${prices.iconos}</td>
-                <td>${prices.iconos}</td>
-                <td>${prices.iconos}</td>
+                <td>${res.prices.iconos}</td>
+                <td>${res.prices.iconos}</td>
+                <td>${res.prices.iconos}</td>
               </tr>
       </tbody>
     </table>
