@@ -2,7 +2,7 @@
 console.log('Hola1');
 
 setTimeout(() => {
-   console.log('Hola2'); 
+  console.log('Hola2'); 
 }, 1000);
 
 console.log('Hola3');
@@ -43,11 +43,13 @@ const construirEncabezado = async () => {
 construirEncabezado();
 */
 
-let construirNav = async(path)=>{
-    let peticion = await fetch(`${path}.json`);
-    let res = await peticion.json();
-    let seleccion = document.querySelector('#navigator');
-    seleccion.insertAdjacentHTML('beforeend', /*html*/`
+let construirNav = async (path) => {
+  let peticion = await fetch(`${path}.json`);
+  let res = await peticion.json();
+  let seleccion = document.querySelector("#navigator");
+  seleccion.insertAdjacentHTML(
+    "beforeend",
+    /*html*/ `
     <div class="container-fluid py-3">
       <a class="px-5" href="/" class="d-flex align-items-center link-body-emphasis text-decoration-none">
         <img class="netflixlogo"
@@ -56,34 +58,44 @@ let construirNav = async(path)=>{
       </a>
       <a class="px-5 link-body-emphasis text-decoration-none" href="#">${res.nav.enlace}</a>
     </div>
-    `)
-}
+    `
+  );
+};
 
 construirNav("config");
 
-let construiSection1 = async(path)=>{
-    let peticion = await fetch(`${path}.json`);
-    let res = await peticion.json();
-    let seleccion = document.querySelector('#seccion1');
-    seleccion.insertAdjacentHTML('beforeend', /*html*/`
+let construiSection1 = async (path) => {
+  let peticion = await fetch(`${path}.json`);
+  let res = await peticion.json();
+  let seleccion = document.querySelector("#seccion1");
+  seleccion.insertAdjacentHTML(
+    "beforeend",
+    /*html*/ `
     <div class="pricing-header py-3 pb-md text-start">
         <h1 class="fs-6 fw-normal text-body-emphasis">${res.header.title}</h1>
-        <p class="fs-2 fw-bold">${res.header['sub-title']}</p>
-        ${res.header.parrafo.map((value) => /*html*/`
+        <p class="fs-2 fw-bold">${res.header["sub-title"]}</p>
+        ${res.header.parrafo
+      .map(
+        (value) => /*html*/ `
         <p class="d-flex align-items-center fw-semibold"><svg class="bi text-danger" width="24" height="24">
             <use xlink:href="#check"/>
-          </svg>&ensp;${value.texto}</p>`).join('')}
+          </svg>&ensp;${value.texto}</p>`
+      )
+      .join("")}
       </div>
-    `)
-}
+    `
+  );
+};
 
 construiSection1("config");
 
-let construiSection2 = async(path)=>{
-    let peticion = await fetch(`${path}.json`);
-    let res = await peticion.json();
-    let seleccion = document.querySelector('#cards');
-    seleccion.insertAdjacentHTML('beforeend', /*html*/`
+let construiSection2 = async (path) => {
+  let peticion = await fetch(`${path}.json`);
+  let res = await peticion.json();
+  let seleccion = document.querySelector("#cards");
+  seleccion.insertAdjacentHTML(
+    "beforeend",
+    /*html*/ `
     <div class="col">
     <div class="card mb-4 rounded-3">
       <div class="card-header py-3">
@@ -117,18 +129,73 @@ let construiSection2 = async(path)=>{
       </div>
     </div>
   </div>
-    `)
-}
+    `
+  );
+};
 
 construiSection2("config");
 
-let construiSection3 = async(path)=>{
-    let peticion = await fetch(`${path}.json`);
-    let res = await peticion.json();
-    let seleccion = document.querySelector('#seccion1');
-    seleccion.insertAdjacentHTML('beforeend', /*html*/`
-    
-    `)
-}
+let construirSection3 = async (path) => {
+  let peticion = await fetch(`${path}.json`);
+  let res = await peticion.json();
+  let seleccion = document.querySelector("#prices");
+  seleccion.insertAdjacentHTML(
+    "beforeend",
+    /*html*/ `
+  <h2 class="display-6 text-center mb-4">${res.prices.title}</h2>
 
-construiSection3("config");
+  <div class="table-responsive">
+    <table class="table text-center">
+      <thead>
+        <tr>
+          <th style="width: 34%;"></th>
+          <th style="width: 22%;">${res.prices.tables.t1}</th>
+          <th style="width: 22%;">${res.prices.tables.t2}</th>
+          <th class="text-danger" style="width: 22%;">${res.prices.tables.t3
+    }</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <th scope="row" class="text-start">Monthly price</th>
+          <td>${res.prices.price.p1}</td>
+          <td>${res.prices.price.p2}</td>
+          <td class="text-danger">${res.prices.price.p3}</td>
+        </tr>
+        <tr>
+          <th scope="row" class="text-start">Video quality</th>
+          <td>${res.prices.video.v1}</td>
+          <td>${res.prices.video.v2}</td>
+          <td class="text-danger">${res.prices.video.v3}</td>
+        </tr>
+      </tbody>
+
+      <tbody>
+        <tr>
+          <th scope="row" class="text-start">Resolution</th>
+          <td>${res.prices.resolution.r1}</td>
+          <td>${res.prices.resolution.r2}</td>
+          <td class="text-danger">${res.prices.resolution.r3}</td>
+        </tr>
+        <tr>
+                <th scope="row" class="text-start">Watch on your TV, computer, mobile phone and tablet</th>
+                <td>${prices.iconos}</td>
+                <td>${prices.iconos}</td>
+                <td>${prices.iconos}</td>
+              </tr>
+      </tbody>
+    </table>
+    <p class="fs-6">HD (720p), Full HD (1080p), Ultra HD (4K) and HDR availability subject to your internet
+      service and device capabilities. Not all content is available in all resolutions. See our <a
+        href="https://help.netflix.com/legal/termsofuse">Terms of Use</a> for more details.
+      Only people who live with you may use your account. Watch on 4 different devices at the same time with
+      Premium, 2 with Standard and 1 with Basic.</p>
+    <div class="d-grid gap-2 col-6 mx-auto">
+      <button class="btn btn-danger py-3 fs-4" type="button">Next</button>
+    </div>
+  </div>
+    `
+  );
+};
+
+construirSection3("config");

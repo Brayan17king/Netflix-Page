@@ -38,10 +38,39 @@
         "title": "Compare plans",
         "tables": [
             {
-                "p1": "Basic",
-                "p2": "Standart",
-                "p3": "Premium"
+                "t1": "Basic",
+                "t2": "Standart",
+                "t3": "Premium"
+            }
+        ],
+        "price": [
+            {
+                "p1": "$6.99",
+                "p2": "$15.49",
+                "p3": "$19.99"
+            }
+        ],
+        "video": [
+            {
+                "v1": "Good",
+                "v2": "Better",
+                "v3": "Best"
+            }
+        ],
+        "resolution": [
+            {
+                "r1": "720p",
+                "r2": "1080p",
+                "r3": "4K+HDR"
+            }
+        ],
+        "iconos":[
+            {
+                "icon1": "<svg class='bi text-center' width='24' height='24'><use xlink:href='#check'/></svg>",
+                "icon2": "<svg class='bi text-center' width='24' height='24'><use xlink:href='#check'/></svg>",
+                "icon3": "<svg class='bi text-center' width='24' height='24'><use xlink:href='#check'/></svg>"
             }
         ]
+        
     }
 }
