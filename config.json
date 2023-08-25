@@ -81,5 +81,18 @@
             }
         ],
         "iconos": "<svg class='bi text-center' width='24' height='24'><use xlink:href='#check'/></svg>"
+    },
+
+    "footer":{
+        "tel": "Questions? Call 01 800 917 1563",
+        "faq": "FAQ",
+        "priv": "Privacy",
+        "help": "Help Center",
+        "cook":"Cookie Preferences",
+        "shop": "Netflix Shop",
+        "corp": "Corporate Information",
+        "term" :"Terms of Use"
+        
     }
+
 }

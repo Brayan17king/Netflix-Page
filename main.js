@@ -198,3 +198,34 @@ let construirSection3 = async (path) => {
 };
 
 construirSection3("config");
+
+let construirFooter = async (path) => {
+  let peticion = await fetch(`${path}.json`);
+  let res = await peticion.json();
+  let seleccion = document.querySelector("#footer");
+  seleccion.insertAdjacentHTML(
+    "beforeend",
+    /*html*/ `
+    <p>${res.footer.tel}</p>
+    <div class="d-flex flex-wrap ps-0 gap-3">
+      <ul class="ps-0">
+        <p><a class="text-decoration-none text-dark" href="#">${res.footer.faq}<ap></ap>
+        </p>
+        <p><a class="text-decoration-none text-dark" href="#">${res.footer.priv}<ap></ap>
+        </p>
+      </ul>
+      <ul>
+        <p><a class="text-decoration-none text-dark" href="#">${res.footer.help}</a></p>
+        <p><a class="text-decoration-none text-dark" href="#">${res.footer.cook}</a></p>
+      </ul>
+      <ul>
+        <p><a class="text-decoration-none text-dark" href="#">${res.footer.shop}</a></p>
+        <p><a class="text-decoration-none text-dark" href="#">${res.footer.corp}</a></p>
+      </ul>
+      <p><a class="text-decoration-none text-dark" href="#">${res.footer.term}</a></p>
+    </div>
+    `
+  );
+};
+
+construirFooter("config");
